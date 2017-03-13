@@ -8,3 +8,4 @@ const child = exec('echo hello ' + argv, function(err, stdout, stderr){
 });
 
 exec('npm init -y');
+exec('npm i --save shelljs');
