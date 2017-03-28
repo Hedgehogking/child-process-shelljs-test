@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Hedgehogking/child-process-shelljs-test#readme",
   "dependencies": {
-    "shelljs": "^0.7.7"
+    "cssmin": "^0.4.3",
+    "moment": "^2.18.1",
+    "shelljs": "^0.7.7",
+    "uglify-js": "^2.8.16"
   }
 }
