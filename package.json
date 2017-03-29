@@ -2,7 +2,7 @@
   "name": "child-process-shelljs-test",
   "version": "1.0.0",
   "description": "for learning",
-  "main": "hello.js",
+  "main": "watch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
