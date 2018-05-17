@@ -5,12 +5,13 @@ const cutLine = 1050;
 const getFileFromDir = async function (dir) {
   const arr = [];
   const dirs = fs.readdirSync(dir);
-  for (const filename of dirs) {
+  for (let i = 0; i < dirs.length; i++) {
+    const filename = dirs[i];
     const tmpStat = fs.statSync(`${dir}/${filename}`);
     let tmpArr = [];
-    if (tmpStat.isFile()) {
+    if (tmpStat.isFile() && !filename.match(/.*\.(jpg|jpeg|png|git|webp|ico|eot|woff|ttf|svg)/)) {
       tmpArr.push(`${dir}/${filename}`);
-    } else if (tmpStat.isDirectory()) {
+    } else if (tmpStat.isDirectory() && !filename.match(/^\./) && !['dist', 'node_modules'].includes(filename)) {
       tmpArr = await getFileFromDir(`${dir}/${filename}`);
     }
     arr.push(...tmpArr);
